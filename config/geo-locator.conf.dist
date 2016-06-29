@@ -1,0 +1,25 @@
+# Geo Locator NodeJS App
+
+# Server Configuration
+server {
+
+  # port to listen to
+  listen 80;
+
+  # domain name
+  #server_name .awrodriguez.com/geo-locator;
+
+  # default charset
+  charset utf-8;
+
+  # Django server root
+  location / {
+    proxy_pass http://192.168.1.13:3000;  // Internal Address
+    proxy_http_version 1.1;
+    proxy_set_header Upgrade $http_upgrade;
+    proxy_set_header Connection 'upgrade';
+    proxy_set_header Host $host;
+    proxy_cache_bypass $http_upgrade;
+  }
+
+}
