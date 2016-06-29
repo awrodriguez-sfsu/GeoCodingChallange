@@ -1,2 +1,28 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<head>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDj6uSb4YcqR7hTgSsPduuQ9gsfM4Lf4-k&callback=initMap" async defer></script>
+    <script type="text/javascript" rel="script" src="/javascripts/googlemap.js"></script>
+</head>
+
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="map"></div>
+
+<div id="search_form">
+    <div class="inline">
+        <input id="search_field_lat" type="text" name="search-lat" placeholder="Enter Latitude">
+        <input id="search_field_lng" type="text" name="search-lng" placeholder="Enter Longitude">
+        <input id="search_field" type="text" name="search" placeholder="Enter Search" hidden>
+        <input id="search_submit" type="button" name="submit" value="Search">
+        <select id="input_type_select" name="type_select" title="input type">
+            <option name="lat-lng">Lat/Lng</option>
+            <option name="address">Address</option>
+        </select>
+    </div>
+</div>
+
+<div class="results" id="list_view">
+    <div class="container">
+        <div class="table-view">
+
+        </div>
+    </div>
+</div>
+
