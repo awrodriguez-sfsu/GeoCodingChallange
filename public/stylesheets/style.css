@@ -28,36 +28,32 @@ a {
     padding: 10px;
     background: black;
     height: auto;
-    opacity: .75;
     color: black;
     text-align: center;
 }
 
-#search_form .inline {
-    display: flex;
-    padding: 20px;
-}
-
-.inline input[type=text] {
-    width: 90%;
-    padding: 15px;
-    margin-right: 5px;
-}
-
-.inline input[type=button] {
-    width: 10%;
-    margin-right: 5px;
+#search_field {
+    display: none;
 }
 
 .results {
-    display: none;
-    z-index: 2;
     position: absolute;
     top: 0;
     left: 75vw;
 }
 
-.thumbnail {
+.results-container {
+    margin: 10px;
+    width: 20vw;
+    text-align: center;
+}
+
+.list-view {
+    margin: 3px;
+    border: 1px solid black;
+}
+
+.property-thumbnail {
     height: 100px;
     width: 100px;
 }
