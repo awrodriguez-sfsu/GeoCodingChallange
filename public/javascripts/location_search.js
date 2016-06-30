@@ -29,20 +29,19 @@ function locationMain() {
         }
     });
 
-    $('.modal-trigger').click(function(event) {
-        event.preventDefault();
-
-        console.log($(this));
-
+    $('.table-view').delegate('.modal-trigger', 'click', function(event) {
         var id = $(this).attr('id');
         id = id.split('-')[1];
 
         $.ajax({
             url: '/list/get/' + id,
             success: function(response) {
-                $('#property-modal #modal-image').attr('src', response.image_url);
-                $('#property-modal #address1').val(response.address);
-                $('#property-modal #address2').val(response.city + ', ' + response.state + ' ' + response.zip);
+                response = JSON.parse(response);
+
+                $('#modal-image').attr('src', response.image_url);
+                $('#address1').html(response.address);
+                $('#address2').html(response.city + ', ' + response.state + ' ' + response.zip);
+                $('#property-modal').modal('show');
 
             },
             error: function(xhr) {

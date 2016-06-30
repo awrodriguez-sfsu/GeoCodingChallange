@@ -57,3 +57,12 @@ a {
     height: 100px;
     width: 100px;
 }
+
+.property-modal-image {
+    height: 500px;
+    width: 500px;
+}
+
+#property-modal {
+    text-align: center;
+}

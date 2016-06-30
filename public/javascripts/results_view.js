@@ -28,7 +28,7 @@ function mapResults(results) {
             lat: results[i].lat,
             lng: results[i].long,
             title: results[i].address,
-            content: "<a href='/detail/" + results[i].id + "'><img class='thumbnail' src='" + results[i].image_url + "' ><p>" + results[i].address + "</p></a>"
+            content: "<a><img class='thumbnail' src='" + results[i].image_url + "' ><p>" + results[i].address + "</p></a>"
         });
     }
 
