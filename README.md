@@ -6,7 +6,7 @@ You first need to install several packages.
 I used an Ubuntu distribution of Linux to create and host this, so all
 commands will be Ubuntu based.
 
-'''
+```
 sudo apt-get intall nodejs npm nginx
 '''
 
