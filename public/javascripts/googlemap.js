@@ -9,18 +9,19 @@ function initMap() {
         zoom: 5
     });
 
-    if(navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(function(position) {
-            var pos = {
-                lat: position.coords.latitude,
-                lng: position.coords.longitude
-            };
-
-            map.setCenter(pos);
-            map.setZoom(12);
-
-        });
-    }
+    // Got an error once I deployed this for some reason
+    // if(navigator.geolocation) {
+    //     navigator.geolocation.getCurrentPosition(function(position) {
+    //         var pos = {
+    //             lat: position.coords.latitude,
+    //             lng: position.coords.longitude
+    //         };
+    //
+    //         map.setCenter(pos);
+    //         map.setZoom(12);
+    //
+    //     });
+    // }
 }
 
 function mapCenter(location) {
