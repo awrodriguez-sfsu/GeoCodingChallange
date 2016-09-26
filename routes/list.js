@@ -50,6 +50,10 @@ router.get('/get/:id', function(request, response, next) {
 function handleResponse(response, location, distance) {
     var propertyList = db.getAllProperties();
 
+    if(isNaN(location.lat) || isNaN(location.lng)) {
+        return redirectTo400(response);
+    }
+
     var results = [];
     for(var i = 0; i < propertyList.length; i++) {
         if(Math.abs(location.lat - propertyList[i].lat) < .3) {
@@ -63,6 +67,14 @@ function handleResponse(response, location, distance) {
 
     response.set('Content-Type', 'application/json');
     response.status(200).json(jsonObj);
+    response.end();
+}
+
+function redirectTo400(response) {
+    var responseText = 'lat and lng must me float';
+
+    response.set('Content-Type', 'application/json');
+    response.status(400).json(responseText);
     response.end();
 }
 
