@@ -71,7 +71,7 @@ function handleResponse(response, location, distance) {
 }
 
 function redirectTo400(response) {
-    var responseText = 'lat and lng must me float';
+    var responseText = '400 Bad Request: lat and lng must me float';
 
     response.set('Content-Type', 'application/json');
     response.status(400).json(responseText);
