@@ -1,68 +1,68 @@
 body {
-    padding: 50px;
-    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
-    color: #00B7FF;
+  color: #00B7FF;
 }
 
 #map {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0;
-    height: 100vh;
-    width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  height: 100vh;
+  width: 100vw;
 }
 
 #map.results {
-    width: 75vw;
+  width: 75vw;
 }
 
 #search_form {
-    position: relative;
-    z-index: 1;
-    width: 75vw;
-    margin: 20% auto 0;
-    padding: 10px;
-    background: black;
-    height: auto;
-    color: black;
-    text-align: center;
+  position: relative;
+  z-index: 1;
+  width: 75vw;
+  margin: 20% auto 0;
+  padding: 10px;
+  background: black;
+  height: auto;
+  color: black;
+  text-align: center;
 }
 
 #search_field {
-    display: none;
+  display: none;
 }
 
 .results {
-    position: absolute;
-    top: 0;
-    left: 75vw;
+  position: absolute;
+  top: 0;
+  left: 75vw;
 }
 
 .results-container {
-    margin: 10px;
-    width: 20vw;
-    text-align: center;
+  margin: 10px;
+  width: 20vw;
+  text-align: center;
 }
 
 .list-view {
-    margin: 3px;
-    border: 1px solid black;
+  margin: 3px;
+  border: 1px solid black;
 }
 
 .property-thumbnail {
-    height: 100px;
-    width: 100px;
+  height: 100px;
+  width: 100px;
 }
 
 .property-modal-image {
-    height: 500px;
-    width: 500px;
+  height: 500px;
+  width: 500px;
 }
 
 #property-modal {
-    text-align: center;
+  text-align: center;
 }

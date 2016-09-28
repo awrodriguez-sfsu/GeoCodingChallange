@@ -1,7 +1,3 @@
-/**
- * Created by arod on 6/28/16.
- */
-
 function locationMain() {
   $('#search_submit').click(function(event) {
     var selected = $('#input_type_select option:selected').attr('name');

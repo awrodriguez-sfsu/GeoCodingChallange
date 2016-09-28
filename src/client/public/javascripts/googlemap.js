@@ -1,6 +1,3 @@
-/**
- * Created by arod on 6/29/16.
- */
 var map;
 
 function initMap() {
