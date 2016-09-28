@@ -20,7 +20,7 @@ it also handles an optional ?distance parameter that wil default to 20
 I ended up having to add another functionality to get a specific property from
 a list when I needed it in the front end.
 
-/list/get/:id
+/list/property/:id
 
 The UI is built on top of this API and I decided to go with a single page app
 mostly because I have never done one.
@@ -39,12 +39,11 @@ I used an Ubuntu distribution of Linux to create and host this, so all
 commands will be Ubuntu based.
 
 ```
-sudo apt-get intall nodejs npm nginx
+sudo apt-get intall nodejs npm
 ```
 
 nodejs runs the application server
 npm is the package manager
-nginx is the server that handles http requests to the outside world
 
 next go to the directory you want to install the app on
 
@@ -70,8 +69,12 @@ you can choose to use this as an example or configure nginx your own way
 
 remember to restart nginx to encorporate changes
 
-run the nodejs app from the app folder
+run the nodejs app from the app folder each on a different terminal
 
 ```
-npm start
+npm run-script run-service
+npm run-script run-client
 ```
+
+Navigate to localhost:3000 for client
+Navigate to localhost:3001 for serviceg
