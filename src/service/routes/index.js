@@ -12,6 +12,7 @@ routes.get('/', (request, response, next) => {
   };
 
   response.set('Content-Type', 'application/json');
+  response.set('Access-Control-Allow-Origin', 'http://localhost:3000');
   response.status(200).json(responseBody);
   response.end();
 });
@@ -43,6 +44,7 @@ routes.get('/property/:id', (request, response, next) => {
   const jsonObj = JSON.stringify(property);
 
   response.set('Content-Type', 'application/json');
+  response.set('Access-Control-Allow-Origin', 'http://localhost:3000');
   response.status(200).json(jsonObj);
   response.end();
 });
@@ -66,6 +68,7 @@ function handleResponse(response, location, distance) {
   const jsonObj = JSON.stringify(results);
 
   response.set('Content-Type', 'application/json');
+  response.set('Access-Control-Allow-Origin', 'http://localhost:3000');
   response.status(200).json(jsonObj);
   response.end();
 }
@@ -74,6 +77,7 @@ function redirectTo400(response) {
   const responseText = '400 Bad Request: lat and lng must me float';
 
   response.set('Content-Type', 'application/json');
+  response.set('Access-Control-Allow-Origin', 'http://localhost:3000');
   response.status(400).json(responseText);
   response.end();
 }

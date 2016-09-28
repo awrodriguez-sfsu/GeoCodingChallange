@@ -1,77 +1,77 @@
 <head>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDj6uSb4YcqR7hTgSsPduuQ9gsfM4Lf4-k&callback=initMap" async defer></script>
-    <script type="text/javascript" rel="script" src="/javascripts/googlemap.js"></script>
-    <script type="text/javascript" rel="script"  src="/javascripts/results_view.js"></script>
-    <script type="text/javascript" rel="script" src="/javascripts/location_search.js"></script>
-    <script type="text/javascript" rel="script" src="/js/modal.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDj6uSb4YcqR7hTgSsPduuQ9gsfM4Lf4-k&callback=initMap" async defer></script>
+  <script type="text/javascript" rel="script" src="/javascripts/googlemap.js"></script>
+  <script type="text/javascript" rel="script"  src="/javascripts/results_view.js"></script>
+  <script type="text/javascript" rel="script" src="/javascripts/location_search.js"></script>
+  <script type="text/javascript" rel="script" src="/js/modal.js"></script>
 </head>
 
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="map"></div>
 
 <div id="search_form">
-    <div class="form-inline">
-        <div class="form-group">
-            <input class="form-control" id="search_field_lat" type="text" name="search-lat" placeholder="Enter Latitude">
-        </div>
+  <div class="form-inline">
+    <div class="form-group">
+      <input class="form-control" id="search_field_lat" type="text" name="search-lat" placeholder="Enter Latitude">
+    </div>
 
-        <div class="form-group">
-            <input class="form-control" id="search_field_lng" type="text" name="search-lng" placeholder="Enter Longitude">
-        </div>
+    <div class="form-group">
+      <input class="form-control" id="search_field_lng" type="text" name="search-lng" placeholder="Enter Longitude">
+    </div>
 
-        <div class="form-group">
-            <input class="form-control" id="search_field" type="text" name="search" placeholder="Enter Search">
-        </div>
+    <div class="form-group">
+      <input class="form-control" id="search_field" type="text" name="search" placeholder="Enter Search">
+    </div>
 
-        <div class="form-group">
-            <select class="form-control" id="input_type_select" name="type_select" title="input type">
-                <option name="lat-lng">Lat/Lng</option>
-                <option name="address">Address</option>
-            </select>
-        </div>
+    <div class="form-group">
+      <select class="form-control" id="input_type_select" name="type_select" title="input type">
+          <option name="lat-lng">Lat/Lng</option>
+          <option name="address">Address</option>
+      </select>
+    </div>
 
-        <div class="form-group">
-            <input class="form-control btn btn-default" id="search_submit" type="button" name="submit" value="Search">
-        </div>
+    <div class="form-group">
+      <input class="form-control btn btn-default" id="search_submit" type="button" name="submit" value="Search">
+    </div>
     </div>
 </div>
 
 <div class="results" id="list_view">
-    <div class="results-container">
-        <div class="table-view">
+  <div class="results-container">
+    <div class="table-view">
 
-        </div>
     </div>
+  </div>
 </div>
 
 <div class="modal fade" id="property-modal" tabindex="1" role="dialog">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                <h4 class="modal-title"></h4>
-            </div>
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title"></h4>
+      </div>
 
-            <div class="modal-body">
-                <div class="row">
-                    <div class="col-md-12">
-                        <img class="property-modal-image" id="modal-image" src="">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <p id="address1"></p>
-                    </div>
-                    <div class="col-md-12">
-                        <p id="address2"></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-12">
+            <img class="property-modal-image" id="modal-image" src="">
+          </div>
         </div>
+        <div class="row">
+          <div class="col-md-12">
+            <p id="address1"></p>
+          </div>
+          <div class="col-md-12">
+            <p id="address2"></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
     </div>
+  </div>
 </div>
