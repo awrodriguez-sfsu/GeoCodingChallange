@@ -1,5 +1,4 @@
 import Express from 'express';
-import path from 'path';
 import Logger from 'morgan';
 import bodyParser from 'body-parser';
 
