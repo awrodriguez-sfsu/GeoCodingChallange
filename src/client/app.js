@@ -6,7 +6,6 @@ import cookieParser from 'cookie-parser';
 import bodyParser from 'body-parser';
 
 import routes from './routes/index';
-import lists from './routes/list';
 
 const app = Express();
 
@@ -20,7 +19,6 @@ app.use(cookieParser());
 app.use(Express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
-app.use('/list/', lists);
 
 app.use((request, response, next) => {
   const error = new Error('Not Found');

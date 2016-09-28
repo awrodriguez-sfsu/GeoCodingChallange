@@ -35,7 +35,7 @@ router.get('/', function (request, response, next) {
 
 });
 
-router.get('/get/:id', function(request, response, next) {
+router.get('/property/:id', function(request, response, next) {
     var id = request.params.id;
 
     var property = db.getProperty(id);

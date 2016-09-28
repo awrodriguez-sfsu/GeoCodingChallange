@@ -73,5 +73,5 @@ remember to restart nginx to encorporate changes
 run the nodejs app from the app folder
 
 ```
-nodejs ./bin/www
+npm start
 ```
