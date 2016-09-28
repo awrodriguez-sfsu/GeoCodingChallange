@@ -6,21 +6,18 @@ This was a good coding challenge as I have never used NodeJS
 I chose to do so because I wanted a challenge and several people that
 I know have been clamoring on about how awesome it is.
 
-The API is build as the background of this project and can be accessed by
-going to www.awrodriguez.com/list
-
-It can take several different get parameters depending on what information you want.
+This API can take several different get parameters depending on what information you want.
 
 ?address=<address>
 
 ?lat=37.7&lng=-122.3
 
-it also handles an optional ?distance parameter that wil default to 20
+it also handles an optional ?distance parameter that will default to 20
 
 I ended up having to add another functionality to get a specific property from
 a list when I needed it in the front end.
 
-/list/property/:id
+/property/:id
 
 The UI is built on top of this API and I decided to go with a single page app
 mostly because I have never done one.
@@ -64,12 +61,7 @@ cd GeoCodingChallenge
 npm install
 ```
 
-Included in this repo is a distribution file of the config that nginx uses
-you can choose to use this as an example or configure nginx your own way
-
-remember to restart nginx to encorporate changes
-
-run the nodejs app from the app folder each on a different terminal
+run the nodejs app from the app folder each on a different terminal or screen
 
 ```
 npm run-script run-service
@@ -77,4 +69,4 @@ npm run-script run-client
 ```
 
 Navigate to localhost:3000 for client
-Navigate to localhost:3001 for serviceg
+Navigate to localhost:3001 for service
