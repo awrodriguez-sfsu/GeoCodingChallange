@@ -1,19 +1,17 @@
 import Express from 'express';
 import path from 'path';
-import favicon from 'serve-favicon';
 import Logger from 'morgan';
 import bodyParser from 'body-parser';
 
-import lists from './routes/list';
+import routes from './routes/index';
 
 const app = Express();
 
 app.use(Logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(Express.static(path.join(__dirname, 'public')));
 
-app.use('/', lists);
+app.use('/', routes);
 
 app.use((request, response, next) => {
   const error = new Error('Not Found');
@@ -23,12 +21,18 @@ app.use((request, response, next) => {
 
 if (app.get('env') === 'development') {
   app.use((error, request, response, next) => {
-    response.status(error.status || 500).json(error.message);
+    response.status(error.status || 500).json({
+      message: error.message,
+      error
+    });
   });
 }
 
 app.use((error, request, response, next) => {
-  response.status(error.status || 500).json(error.message);
+  response.status(error.status || 500).json({
+    message: error.message,
+    error: {}
+  });
 });
 
 export default app;
