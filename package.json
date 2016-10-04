@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "build-client": "webpack --progress",
-    "run-service": "babel-node --presets es2015 ./src/service/bin/run",
-    "run-client": "babel-node --presets es2015 ./src/client/bin/run"
+    "run-service": "babel-node --presets es2015 ./src/service/bin/GeoCodingServiceServer",
+    "run-client": "babel-node --presets es2015 ./src/client/bin/GeoCodingClientServer"
   },
   "dependencies": {
     "babel-cli": "^6.14.0",
