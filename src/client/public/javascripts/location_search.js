@@ -63,7 +63,6 @@ function getProperties(location) {
   $.get({
     url: 'http://localhost:3001/properties/',
     data: {lat: location.lat, lng: location.lng},
-    async: false,
     success: function(response) {
       const results = JSON.parse(response);
       mapDrawCircle(location);

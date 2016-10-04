@@ -1,10 +1,15 @@
 var map;
 
 function initMap() {
-  map = new google.maps.Map(document.getElementById('map'), {
+  const options = {
+    scrollwheel: false,
+    scaleControl: false,
+    draggable: false,
     center: {lat: 41, lng: -97},
     zoom: 5
-  });
+  };
+
+  map = new google.maps.Map(document.getElementById('map'), options);
 }
 
 function mapCenter(location) {

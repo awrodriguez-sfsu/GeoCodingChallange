@@ -13,7 +13,7 @@ a {
   left: 0;
   z-index: 0;
   height: 100%;
-  width: 100vw;
+  width: 100%;
   padding: 0;
 }
 
@@ -24,7 +24,7 @@ a {
 #search_form {
   position: relative;
   z-index: 1;
-  width: 75vw;
+  width: 75%;
   margin: 20% auto 0;
   padding: 10px;
   background: black;
@@ -40,7 +40,7 @@ a {
 .results {
   position: absolute;
   top: 0;
-  left: 75vw;
+  left: 75%;
 }
 
 .results-container {
