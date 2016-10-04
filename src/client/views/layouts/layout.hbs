@@ -5,11 +5,14 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <link rel="stylesheet" href="/css/bootstrap.min.css" />
     <link rel="stylesheet" href="/css/bootstrap-theme.min.css" />
-    <script src="/javascripts/jquery-1.12.2.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-    {{head}}
+    {{{block 'css'}}}
   </head>
   <body>
     {{{body}}}
+  <footer>
+    <script src="/javascripts/jquery-1.12.2.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    {{{block 'js'}}}
+  </footer>
   </body>
 </html>
